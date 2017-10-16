@@ -1,0 +1,11 @@
+{%extends "AppBundle:layouts:layout.html.twig"%}
+{% block content%}
+    <div class="col-lg-8 box-form">
+        <h2>Mis datos</h2>
+        <hr/>
+        
+        {{form_start(formBio, {'enctype' : 'multipart/form-data'} )}}
+        
+        {{form_end(formBio)}}
+    </div>
+{% endblock %}

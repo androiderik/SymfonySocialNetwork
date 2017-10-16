@@ -1,0 +1,73 @@
+BackendBundle\Entity\User:
+    type: entity
+    table: users
+    uniqueConstraints:
+        users_uniques_fields:
+            columns:
+                - email
+                - nick
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        role:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        name:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        surname:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        nick:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        bio:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        active:
+            type: string
+            nullable: true
+            length: 2
+            options:
+                fixed: false
+        image:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

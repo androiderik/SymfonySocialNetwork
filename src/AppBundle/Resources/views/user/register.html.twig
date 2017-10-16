@@ -1,0 +1,15 @@
+{%extends "AppBundle:layouts:layout.html.twig"%}
+{%block javascripts %}
+    {{ parent() }} {# Charging all elements in this block and ADD the new one, avoid replacing scripts#}
+    <script src="{{asset('assets/js/custom/nick-test.js')}} "></script>
+{%endblock%}
+{% block content%}
+    <div class="col-lg-6 box-form">
+        <h2>Registrarse</h2>
+        <hr/>
+        
+        {{form_start(form, {'action': '', 'method':'POST'})}}
+        {{form_errors(form)}}
+        {{form_end(form)}}
+    </div>
+{% endblock %}
